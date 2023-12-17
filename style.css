@@ -1,0 +1,155 @@
+/* Variables */
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+}
+
+
+/* boiler plate reset*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default text*/
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--very-light-gray);
+}
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--transparent-white);
+}
+
+
+/* Flex styles*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.three-col-card{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card styles*/
+
+.card-one{
+    background: var(--bright-orange);
+}
+
+.card-two{
+    background: var(--dark-cyan);
+
+}
+
+.card-three{
+    background: var(--very-dark-cyan);
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 3rem;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.column img{
+    max-width: 50px;
+}
+
+/* button styles*/
+
+button{
+    background: white;
+    border-radius: 2rem;
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: .5s ease;
+    width: 60%;
+    margin-top: 4rem;
+}
+
+.btn-xl-1{
+    color: var(--bright-orange);
+}
+
+.btn-xl-2{
+    color: var(--dark-cyan);
+}
+
+.btn-xl-3{
+    color: var(--very-dark-cyan);
+}
+
+
+button:hover{
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+button:active{
+    background: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+/* Media query */
+
+@media only screen 
+and (max-width : 425px) {
+
+    .three-col-card{
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    main{
+        justify-content: center;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    button{
+        margin: 0;
+    }
+
+    .column{
+        min-width: 350px;
+        max-width: 90%;
+    }
+
+}
+
+/* attribution */
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
